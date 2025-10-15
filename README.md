@@ -172,7 +172,4 @@ MIT License © 2025 Remnant Clothing Co.
 
 ---
 
-✅ **Next Step Suggestion:**  
-If you’d like, I can now help you create a `.env.local.example` file and a `package.json` setup (with dependencies and scripts pre-filled) — so your repo is plug-and-play for contributors and deployment.  
 
-Would you like me to generate those next?
