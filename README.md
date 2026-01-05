@@ -19,9 +19,11 @@ Built with **Next.js**, **Supabase**, and **Stripe**, it enables users to browse
 ## 🧭 Project Overview
 
 ### 🎯 Core Purpose
+
 To create an e-commerce platform for **faith-based clothing and accessories**, combining style with belief and building an online community around the message of **Romans 11:5 — “A remnant chosen by grace.”**
 
 ### 🛍 MVP Features
+
 - Product catalog (listing + details)
 - Shopping cart system
 - Stripe checkout for payments
@@ -31,6 +33,7 @@ To create an e-commerce platform for **faith-based clothing and accessories**, c
 - Responsive, mobile-friendly UI
 
 ### 🔮 Future Roadmap
+
 - Blog & Devotionals section (community outreach)
 - Event registration (church & youth meetups)
 - Loyalty system or donations
@@ -57,6 +60,7 @@ remnant-webapp/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
+
 - **Node.js**: v18+ (recommended v20 LTS)
 - **Package Manager**: npm or yarn
 - **Accounts**: Supabase and Stripe
@@ -64,6 +68,7 @@ remnant-webapp/
 ---
 
 ### 1. Clone the Repository
+
 ```bash
 git clone https://github.com/<your-username>/Remnant.git
 cd Remnant/remnant-webapp
@@ -72,6 +77,7 @@ cd Remnant/remnant-webapp
 ---
 
 ### 2. Install Dependencies
+
 ```bash
 npm install
 ```
@@ -93,6 +99,7 @@ STRIPE_WEBHOOK_SECRET=<your_stripe_webhook_secret>
 ---
 
 ### 4. Run Development Server
+
 ```bash
 npm run dev
 ```
@@ -102,6 +109,7 @@ Visit the app at: [http://localhost:3000/](http://localhost:3000/)
 ---
 
 ### 💳 Stripe Setup (Development Mode)
+
 1. Create a Stripe account at [stripe.com](https://stripe.com).
 2. Set up your API keys and webhook secrets in the `.env.local` file.
 
@@ -109,12 +117,43 @@ Visit the app at: [http://localhost:3000/](http://localhost:3000/)
 
 ### 🛠 Useful Commands
 
-| Command           | Description                       |
-|-------------------|-----------------------------------|
-| `npm run dev`     | Starts the development server     |
-| `npm run build`   | Builds the app for production     |
-| `npm start`       | Runs the production build locally |
-| `npm run lint`    | Runs ESLint checks                |
+| Command         | Description                       |
+| --------------- | --------------------------------- |
+| `npm run dev`   | Starts the development server     |
+| `npm run build` | Builds the app for production     |
+| `npm start`     | Runs the production build locally |
+| `npm run lint`  | Runs ESLint checks                |
+| `npm test`      | Runs the Jest unit test suite     |
+
+---
+
+## 🧠 Global State Management (The Brain)
+
+We use **React Context** combined with `localStorage` to handle the shopping cart state globally. This ensures that the cart persists even if the user refreshes the page.
+
+- **Location**: `context/CartContext.js`
+- **Key Features**:
+  - `addToCart(product)`: Adds items or increments quantity if already exists.
+  - `removeFromCart(id)`: Removes an item completely.
+  - `clearCart()`: Resets the cart (e.g., after checkout).
+  - **Persistence**: Automatically syncs with the browser's `localStorage`.
+
+## 🧪 Testing
+
+We use **Jest** and **React Testing Library** for unit testing. The goal is to ensure our logic (especially the cart "Brain") is robust and bug-free before we ship.
+
+### Running Tests
+
+```bash
+npm test
+```
+
+### What is tested?
+
+- **Cart Logic**: Adding, removing, clearing items, and handling duplicates.
+- **Persistence**: Verifying data is saved to and loaded from `localStorage`.
+
+---
 
 ---
 
@@ -123,6 +162,7 @@ Visit the app at: [http://localhost:3000/](http://localhost:3000/)
 The app is deployed on **Vercel**. Every push to the `main` branch triggers an automatic build and deployment.
 
 ### Deployment Steps:
+
 1. Push your code to GitHub.
 2. Link your repository to Vercel.
 3. Vercel will handle the rest (automatic builds and deployments).
@@ -141,6 +181,7 @@ The app is deployed on **Vercel**. Every push to the `main` branch triggers an a
 ## 🤝 Contributing
 
 Contributions are welcome! To collaborate:
+
 1. Fork the repository.
 2. Create a new branch:
    ```bash
@@ -161,7 +202,7 @@ Contributions are welcome! To collaborate:
 ## 🙏 Credits & Inspiration
 
 Built with ❤️ for the Christian community.  
-“We are the Remnant — Chosen By Grace.” *(Romans 11:5)*
+“We are the Remnant — Chosen By Grace.” _(Romans 11:5)_
 
 ---
 
@@ -169,7 +210,4 @@ Built with ❤️ for the Christian community.
 
 MIT License © 2025 Remnant Clothing Co.
 
-
 ---
-
-
