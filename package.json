@@ -1,0 +1,13 @@
+{
+  "name": "remnant-root",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix remnant-webapp",
+    "build": "npm run build --prefix remnant-webapp",
+    "start": "npm run start --prefix remnant-webapp",
+    "lint": "npm run lint --prefix remnant-webapp",
+    "test": "npm run test --prefix remnant-webapp",
+    "serve-static": "npx serve ."
+  }
+}
