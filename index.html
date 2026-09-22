@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REMNANT | Those Who Remain</title>
+    <link rel="stylesheet" href="./styles.css">
+    <meta name="description" content="Premium streetwear for the chosen.">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <a href="#" class="logo">REMNANT.</a>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#collections" class="nav-item">COLLECTIONS</a></li>
+                <li><a href="#" class="nav-item">MEN</a></li>
+                <li><a href="#" class="nav-item">WOMEN</a></li>
+                <li><a href="#manifesto" class="nav-item">ABOUT</a></li>
+            </ul>
+        </nav>
+        <div class="header-right">
+            <div class="cart-icon">CART (0)</div>
+            <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="mobile-nav-links">
+            <li><a href="#collections" class="mobile-nav-item">Collections</a></li>
+            <li><a href="#" class="mobile-nav-item">Men</a></li>
+            <li><a href="#" class="mobile-nav-item">Women</a></li>
+            <li><a href="#manifesto" class="mobile-nav-item">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <span class="hero-subtitle">EST. 2026 // CHOSEN BY GRACE</span>
+        <h1 class="hero-title">THOSE WHO<br>REMAIN</h1>
+        <a href="#collections" class="btn">Explore Collection</a>
+
+        <div class="scroll-indicator">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Collections Grid -->
+    <section id="collections" class="categories">
+        <!-- Card 1 -->
+        <div class="category-card">
+            <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="category-content">
+                <h2 class="category-title">Apparel</h2>
+                <a href="#" class="category-link">Shop Apparel &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="category-card">
+            <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="category-content">
+                <h2 class="category-title">Footwear</h2>
+                <a href="#" class="category-link">Shop Kicks &rarr;</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="category-card">
+            <div class="category-bg" style="background-image: url('https://images.unsplash.com/photo-1627384113743-6bd5a479fffd?q=80&w=800&auto=format&fit=crop');"></div>
+            <div class="category-content">
+                <h2 class="category-title">Accessories</h2>
+                <a href="#" class="category-link">Shop Goods &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto / Brand Story -->
+    <section id="manifesto" class="manifesto">
+        <p class="manifesto-verse">&ldquo;A remnant chosen by grace.&rdquo;<span class="manifesto-ref">— Romans 11:5</span></p>
+        <p class="manifesto-copy">
+            Remnant is clothing for those who remain — built for people who wear their faith
+            like they wear everything else: quietly, deliberately, without apology.
+            Every piece exists to carry that message further than a sermon can reach.
+        </p>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="fade-in" style="animation: fadeUp 1s ease forwards">
+            <h2>Join the Remnant</h2>
+            <p>Subscribe for exclusive drops and early access.</p>
+            <form action="#" onsubmit="event.preventDefault();">
+                <div class="form-group">
+                    <input type="email" placeholder="ENTER YOUR EMAIL" class="form-input" required>
+                    <button type="submit" class="form-submit">Subscribe</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Signals -->
+    <section class="trust-bar">
+        <div class="trust-item">Secure Checkout</div>
+        <div class="trust-item">Worldwide Shipping</div>
+        <div class="trust-item">Easy Returns</div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="logo">REMNANT.</div>
+        <p class="footer-copy">&copy; 2026 Remnant Inc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (function () {
+            var toggle = document.getElementById('menuToggle');
+            var nav = document.getElementById('mobileNav');
+            if (!toggle || !nav) return;
+
+            function closeMenu() {
+                nav.classList.remove('open');
+                toggle.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('nav-open');
+            }
+
+            function toggleMenu() {
+                var isOpen = nav.classList.toggle('open');
+                toggle.classList.toggle('open', isOpen);
+                toggle.setAttribute('aria-expanded', String(isOpen));
+                document.body.classList.toggle('nav-open', isOpen);
+            }
+
+            toggle.addEventListener('click', toggleMenu);
+            nav.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape') closeMenu();
+            });
+        })();
+    </script>
+
+</body>
+</html>
