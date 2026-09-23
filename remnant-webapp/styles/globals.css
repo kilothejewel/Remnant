@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@400;500&display=swap');
+
+:root {
+  --bg: #050505;
+  --accent: #c2410c;
+  --text: #f0f0f0;
+  --text-secondary: #a0a0a0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+.rn-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+
+.rn-wordmark {
+  font-family: 'Cinzel', serif;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin: 0 0 0.75rem;
+}
+
+.rn-tagline {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  max-width: 32rem;
+  margin: 0 0 2rem;
+  line-height: 1.6;
+}
+
+.rn-badge {
+  display: inline-block;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: 999px;
+  margin-bottom: 1.5rem;
+}
+
+.rn-nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+.rn-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 2px;
+}
+
+.rn-nav a:hover {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+.rn-cart-list {
+  width: 100%;
+  max-width: 28rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.rn-cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #1a1a1a;
+}
+
+.rn-cart-item button {
+  background: none;
+  border: 1px solid var(--text-secondary);
+  color: var(--text-secondary);
+  border-radius: 6px;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.rn-cart-item button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
