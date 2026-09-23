@@ -111,3 +111,86 @@ a {
   border-color: var(--accent);
   color: var(--accent);
 }
+
+.rn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 1.5rem 3rem;
+}
+
+.rn-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.15s ease;
+}
+
+.rn-card:hover {
+  border-color: var(--accent);
+}
+
+.rn-card-img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+  background: #111;
+}
+
+.rn-card-body {
+  padding: 0.85rem 1rem 1.1rem;
+}
+
+.rn-card-collection {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  color: var(--accent);
+  margin: 0 0 0.35rem;
+}
+
+.rn-card-name {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.rn-card-price {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.rn-product-img {
+  width: 100%;
+  max-width: 24rem;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.rn-add-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 2rem;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+.rn-add-btn:hover {
+  opacity: 0.9;
+}
