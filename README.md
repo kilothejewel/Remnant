@@ -203,7 +203,7 @@ Contributions are welcome! To collaborate:
 
 Built with ❤️ for the Christian community.  
 “We are the Remnant — Chosen By Grace.” _(Romans 11:5)_
-
+. 
 ---
 
 ## 📜 License
